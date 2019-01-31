@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROCK-PAPER-SCRISSORS GAME"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:text="Choose your move"
+        android:layout_gravity="left"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="1">
+
+        <ImageButton
+            android:id="@+id/paper"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:onClick="paper_click"
+            android:src="@drawable/paper" />
+        <ImageButton
+            android:id="@+id/scissors"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:onClick="scissors_click"
+            android:src="@drawable/scissors" />
+        <ImageButton
+            android:id="@+id/rock"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:onClick="rock_click"
+            android:src="@drawable/rock" />
+
+    </GridLayout>
+    <TextView
+        android:text="Compare with computer"
+        android:layout_gravity="left"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Computer's move"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Player's move"
+            android:layout_marginLeft="90dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <GridLayout
+        android:columnCount="2"
+        android:rowCount="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/empty"
+            android:id="@+id/computer"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+        <ImageView
+            android:id="@+id/player"
+            android:src="@drawable/empty"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+    </GridLayout>
+    <TextView
+        android:text="YOUR SCORCE: 0"
+        android:id="@+id/points"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
